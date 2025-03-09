@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif; /* Mengatur font default untuk halaman */
+    margin: 0; /* Menghapus margin default pada body */
+    padding: 20px; /* Menambahkan padding agar konten tidak menempel di tepi */
+    background-image: url(B_PC_2560x1440_SungJinwoo2_EN.jpg); /* Menetapkan gambar latar belakang */
+    background-size: cover; /* Gambar latar belakang disesuaikan untuk menutupi seluruh halaman */
+}
+
+.container {
+    width: 100%; /* Lebar penuh container */
+    max-width: 400px; /* Lebar maksimal container 400px */  
+    margin: auto; /* Menengahkan container di halaman */
+    background: rgba(197, 27, 27, 0.8); /* Warna latar belakang semi-transparan agar teks lebih mudah dibaca */
+    padding: 20px; /* Memberikan jarak dalam container */
+    border-radius: 10px; /* Membuat sudut container melengkung */
+    position: relative; /* Menentukan posisi relatif untuk z-index */
+    z-index: 1; /* Membuat container muncul di atas elemen lain jika diperlukan */
+    opacity: 0; /* Awalnya container tidak terlihat */
+    animation: fadeIn 3s forwards; /* Animasi untuk container agar muncul secara bertahap (fade-in) selama 1 detik */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); } /* Awalnya container tidak terlihat dan sedikit naik ke atas */
+    to { opacity: 1; transform: translateY(0); } /* Setelah animasi, container terlihat penuh dan pada posisi semula */
+}
+
+h1 {
+    text-align: center; /* Menengahkan teks dalam elemen <h1> */
+}
+
+label {
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    display: block;
+    text-align: center; /* Memusatkan teks di dalam label */
+    width: 100%; /* Agar lebar label mengikuti container */
+}
+
+
+input[type="text"], input[type="number"] {
+    width: 90%; /* Input field akan memenuhi 90% lebar dari container */
+    padding: 10px; /* Padding di dalam input field */
+    margin: 10px 0; /* Jarak vertikal (atas dan bawah) antara input dan elemen lain */
+    border: 1px solid #650983; /* Memberikan garis border berwarna ungu */
+    border-radius: 5px; /* Membuat sudut input field melengkung */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Efek transisi halus pada perubahan border dan bayangan saat fokus */
+}
+
+input[type="text"]:focus, input[type="nummber"]:focus {
+    border-color: #6617f0; /* Warna border berubah saat input dalam fokus (ungu cerah) */
+    box-shadow: 0 0 10px rgba(102, 23, 240, 0.5); /* Efek bayangan biru-ungu ketika input field aktif (fokus) */
+}
+
+.choices {
+    margin-top: 20px; /* Jarak bagian atas dari elemen pilihan */
+}
+
+.choices div {
+    margin-bottom: 10px; /* Jarak bawah antara setiap elemen pilihan */
+}
+
+.output {
+    margin-top: 20px; /* Jarak bagian atas pada output */
+    font-weight: bold; /* Membuat teks output lebih tebal */
+}
+
+button {
+    width: 95%;
+    padding: 10px; /* Jarak dalam pada tombol */
+    background-color: #6617f0; /* Warna latar tombol (ungu) */
+    color: white; /* Warna teks tombol putih */
+    border: none; /* Menghapus border default pada tombol */
+    cursor: pointer; /* Mengubah pointer menjadi tangan saat di-hover */
+    margin-top: 10px; /* Jarak bagian atas tombol dari elemen sebelumnya */
+    border-radius: 5%; /* Membuat sedikit sudut lengkung pada tombol */
+}
+
+button:hover {
+    color: rgb(255, 255, 255);
+    background-color: #000000; /* Mengubah warna latar tombol menjadi merah saat di-hover */
+    transform: scale(1.1); /* Membesarkan ukuran tombol sedikit saat di-hover (110%) */
+}
