@@ -1,28 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tugas4 Membuat form</title>
-    <link rel="stylesheet" href="style.css"><!-- Memanggil file style.css -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Memanggil file style.css -->
+  </head>
+  <body>
+    <div class="container">
+      <!-- Container untuk konten utama -->
+      <h1>Tugas 4 form pilihan</h1>
+      <form id="form">
+        <!-- Membuat form dengan ID 'form' -->
 
-</head>
-<body>
-    <div class="container"><!-- Container untuk konten utama -->
-        <h1> Tugas 4 form pilihan</h1>
-        <form id="form"><!-- Membuat form dengan ID 'form' -->
+        <label for="nama">Masukan Nama</label
+        ><!-- Label untuk input nama -->
+        <input
+          type="text"
+          id="nama"
+          name="nama"
+          required
+        /><!-- Input teks untuk nama, harus diisi -->
 
-            <label for="nama">Masukan Nama</label><!-- Label untuk input nama -->
-            <input type="text" id="nama" name="nama" required><!-- Input teks untuk nama, harus diisi -->
-            
-            <label for="number">Masukan Pilihan</label>
-            <input type="number" id="jumlahPilihan" name="jumlahPilihan" min="1" required ><!-- Input angka untuk jumlah pilihan, minimum 1, harus diisi -->
-            
-            <button type="button" onclick="buatPilihan()">OKE</button><!-- Tombol yang memanggil fungsi 'buatPilihan' saat diklik -->
-        
-        </form>
-        <div id="pilihContainer"></div><!-- Div kosong untuk menampung input pilihan yang akan dibuat dinamis -->
+        <label for="number">Masukan Pilihan</label>
+        <input
+          type="number"
+          id="jumlahPilihan"
+          name="jumlahPilihan"
+          min="1"
+          required
+        /><!-- Input angka untuk jumlah pilihan, minimum 1, harus diisi -->
+
+        <button type="button" onclick="buatPilihan()">OKE</button
+        ><!-- Tombol yang memanggil fungsi 'buatPilihan' saat diklik -->
+      </form>
+      
+    
+      <div id="pilihContainer"></div>
+      <div id="hasilContainer"></div>
     </div>
-        <script src="script.js"></script><!-- Memanggil file script.js -->
-</body>
+    <script src="script.js"></script>
+    <!-- Memanggil file script.js -->
+  </body>
 </html>
