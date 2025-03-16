@@ -9,9 +9,14 @@ function buatPilihan() {
         return; // Hentikan eksekusi jika salah satu tidak diisi
     }
 
+    if(jumlahPilihan <= 0) {
+        alert('Jumlah pilihan minimal 1'); // Jika jumlah pilihan kurang dari 1, tampilkan peringatan
+        return; // Hentikan eksekusi jika jumlah pilihan
+    }
+
     // Mengambil elemen container untuk menampilkan input pilihan
     const pilihContainer=document.getElementById('pilihContainer');
-    pilihContainer.innerHTML = ''; // Membersihkan elemen container dari konten sebelumnya
+    // pilihContainer.innerHTML = ''; // Membersihkan elemen container dari konten sebelumnya
 
     // Membuat input untuk setiap pilihan berdasarkan jumlah yang diinput pengguna
     for (let i = 1; i <= jumlahPilihan; i++) {
